@@ -42,7 +42,7 @@ var FSHADER_SOURCE =
   '  vec3 shadowCoord = (v_PositionFromLight.xyz/v_PositionFromLight.w)/2.0 + 0.5;\n' +
   '  vec4 rgbaDepth = texture2D(u_ShadowMap, shadowCoord.xy);\n' +
   '  float depth = rgbaDepth.r;\n' + // Retrieve the z-value from R
-  '  float visibility = (shadowCoord.z > depth + 0.005) ? 0.7 : 1.0;\n' +
+  '  float visibility = (shadowCoord.z > depth + 0.005) ? 0.0 : 1.0;\n' +
   '  gl_FragColor = vec4(v_Color.rgb * visibility, v_Color.a);\n' +
   '}\n';
 
